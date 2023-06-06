@@ -1,5 +1,10 @@
 pipeline() {
-    agent any
+    agent {
+    docker{
+      image 'naveenandukuri/maven:1.0'
+      args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
+    }
+    }
     stages{
         stage("gitinit"){
             steps{
