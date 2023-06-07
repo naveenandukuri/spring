@@ -8,7 +8,7 @@ pipeline() {
     stages{
         stage("gitinit"){
             steps{
-            sh 'echo passed'
+            sh 'echo passed1'
             //checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/naveenandukuri/spring.git']])
             }
         }
